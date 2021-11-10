@@ -24,3 +24,73 @@ console.log(v); // no error
 console.log(l); //error 
 }
 output();
+
+
+
+Difference between == and ===
+    == and === ar comparison operator
+
+    == compares values
+    ex: ('1'==1) //true , converts both to the same type left to right
+
+    === compares values and type 
+    ex: ('1'===1) //false , wont convert
+
+
+
+Difference between let and const keywords 
+    Both are used to define a variable
+    
+    const after 1st assignment of value we cant re assign the value,can define constants
+
+    let after 1st assignment we can re assign it, can reassign as many times we want to
+
+    ex:
+    let l = 1;
+    l = 2; //true in this case
+    console. log (1);
+
+    const c = 1;
+    c = 2; //error in this case
+    console.log(c);
+
+
+    const c= [1,2]
+    c.push(3); //possible , it  allows us to add a value
+    c = [1,4,5]; //not possible because we are rying to reassign it
+    console.log(c);
+
+
+
+Difference between null and undefined
+    Both represent an empty value
+    null
+    if there was a value and i want to clean it up, can set it to null
+    typeof(null)= object
+
+    undefined
+    When we define a variable and not assign a value to it , it automatically puts a placeholder called as undefined
+    typeof(undefined)= undefined
+
+
+Use of arrow functions
+
+
+    ex:
+
+    const profile = {
+    firstName:'',
+    lastName:'',
+    setName: function(name) {
+        //let splitName = (n)=> {
+        let splitName = function(n) { //sets to the window object
+            let nameArray = n.split(' ');
+            this.firstName = nameArray[0];
+            this.lastName = nameArray[1];
+        }
+    splitName(name);
+    }
+    }
+    profile.setName( 'john doe');
+
+    console.log(profile.firstName); 
