@@ -1,0 +1,26 @@
+Difference between var and let keywords
+    var has been in js since begining
+    it has function scope
+    variable defined with var keyword will die at the end of the function
+    variables defined with var keyword get hoisted at the top of the function
+
+
+    let was introduced in es2015
+    it has a blockscope
+    variable defined with let keyword will die at the end of the block
+    variabled defined with let dont get hoisted
+
+Ex:
+let output = function() {
+
+if (true) {
+    var v = 2;  //value of v exisit outside the block
+    let l = 1;  //value of l wont exist outside the block
+    //console. log(v);  //value exists here
+    //console. log(1);  //value exists here
+}
+
+console.log(v); // no error
+console.log(l); //error 
+}
+output();
