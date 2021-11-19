@@ -1,4 +1,4 @@
-let cleanRoom = {
+let cleanRoom = function(){
     return new Promise(function(resolve,reject){
     resolve('Room is cleaned');
     //reject('Room is not clean');
@@ -18,10 +18,12 @@ let winIcecream = function(message){
 };
 //race for some
 //all for ;-; all
-Promise.race([cleanRoom(),removeGarbage(),winIcecream()]).then(function(){
-    console.log('All finished');
-})
 
+
+
+// Promise.race([cleanRoom(),removeGarbage(),winIcecream()]).then(function(){
+//     console.log('All finished');
+// })
 
 // let cleanRoom = ()=>{
 //     return new Promise(function(resolve,reject){
@@ -41,13 +43,6 @@ Promise.race([cleanRoom(),removeGarbage(),winIcecream()]).then(function(){
 //     resolve(message+' Won icecream');
 //     });
 // };
-
-
-
-
-
-
-
 
 
 // cleanRoom().then(function(message){
